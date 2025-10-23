@@ -20,22 +20,45 @@ class Employee {
 }
 
 class Student {
-    public String name;
-    public int rollNumber;
+//    public String name;
+//    public int rollNumber;
+
+    private String name;
+    private int rollNumber;
 
 //    public Student (String _name , int _rollNumber) {
 //        this.name = _name;
 //        this.rollNumber = _rollNumber;
 //    }
 
-    public void setDetails (String _name , int _rollNumber) {
-        this.name = _name;
-        this.rollNumber = _rollNumber;
+//    public void setDetails (String _name , int _rollNumber) {
+//        this.name = _name;
+//        this.rollNumber = _rollNumber;
+//    }
+//
+//    public void displayDetails () {
+//        System.out.println("Name : " + this.name);
+//        System.out.println("Roll Number : " + this.rollNumber);
+//    }
+    public String getName() {
+        return name;
     }
 
-    public void displayDetails () {
-        System.out.println("Name : " + this.name);
-        System.out.println("Roll Number : " + this.rollNumber);
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public void getDetails () {
+        System.out.println("Name : " +  getName());
+        System.out.println("Roll Number : " + getRollNumber());
+    }
+
+    public void setName (String _name) {
+        this.name = _name;
+    }
+
+    public void setRollNumber (int _rollNumber) {
+        this.rollNumber = _rollNumber;
     }
 }
 
@@ -46,8 +69,10 @@ public class IntroOOPs {
         System.out.println(e1.getName());
 
         Student student = new Student();
-        student.name = "ashish";
-        student.rollNumber = 21;
-        student.displayDetails();
+        student.setName("Ashish");
+        student.setRollNumber(25);
+
+        student.getDetails();
+
     }
 }
