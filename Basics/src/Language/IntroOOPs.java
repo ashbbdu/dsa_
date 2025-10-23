@@ -5,7 +5,12 @@ class Employee {
     public int salary;
 
 
-//    Constructor
+//   Default Constructor
+    public Employee () {
+
+    }
+
+//    Parameterized Constructor
     public Employee (String _name , int _salary) {
        name = _name;
        salary = _salary;
@@ -26,10 +31,15 @@ class Student {
     private String name;
     private int rollNumber;
 
-//    public Student (String _name , int _rollNumber) {
-//        this.name = _name;
-//        this.rollNumber = _rollNumber;
-//    }
+    public Student () {
+        this.name = "Test";
+        this.rollNumber = 1;
+    }
+
+    public Student (String _name , int _rollNumber) {
+        this.name = _name;
+        this.rollNumber = _rollNumber;
+    }
 
 //    public void setDetails (String _name , int _rollNumber) {
 //        this.name = _name;
