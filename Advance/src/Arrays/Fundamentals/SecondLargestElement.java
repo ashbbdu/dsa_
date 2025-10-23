@@ -34,9 +34,28 @@ public class SecondLargestElement {
         return secondLargest == Integer.MIN_VALUE ? -1 : secondLargest;
     }
 
+    public static int secondLargestOptimal (int [] nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        for(int i = 0 ; i < nums.length ; i++) {
+
+            if(nums[i] > largest) {
+                secondLargest = largest; // jaise hi usko naya largest milega wo prev largest ko second largest kr dega
+                largest = nums[i];
+            } else if (nums[i] > secondLargest && nums[i] != largest) {
+                secondLargest = nums[i];
+            }
+//            else {
+//                return 2; // just for testing
+//            }
+        }
+        return secondLargest == Integer.MIN_VALUE ? -1 : secondLargest;
+    }
+
     public static void main(String[] args) {
-        int [] arr = {8 , 8 , 8, 8, 8};
-        System.out.println(secondLargestBrute(arr));;
-        System.out.println(secondLargestBetter(arr));;
+        int [] arr = {1, 2, 4, 7, 7, 5};
+        System.out.println(secondLargestBrute(arr));
+        System.out.println(secondLargestBetter(arr));
+        System.out.println(secondLargestOptimal(arr));
     }
 }
