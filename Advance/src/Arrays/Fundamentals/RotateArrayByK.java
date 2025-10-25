@@ -21,11 +21,29 @@ public class RotateArrayByK {
 
     }
 
+    public static void reverseArray (int [] nums , int start , int end) {
+        while(start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    public static void rotateLeftByKOptimal (int [] nums , int k) {
+        int n = nums.length;
+        k = k % n;
+        reverseArray(nums , 0 , k -1);
+        reverseArray(nums , k , n - 1);
+        reverseArray(nums , 0 , n - 1);
+    }
+
     public static void main(String[] args) {
-        int [] nums = {3, 4, 1, 5, 3, -5};
-        int k = 8;
-        rotateLeftByKBrute(nums , k);
-        rotateLeftByKBrute(nums , k);
+        int [] nums = {1, 2, 3, 4, 5, 6};
+        int k = 2;
+//        rotateLeftByKBrute(nums , k);
+        rotateLeftByKOptimal(nums , k);
         System.out.println();
         for(var num : nums) {
             System.out.print(num + " ");
