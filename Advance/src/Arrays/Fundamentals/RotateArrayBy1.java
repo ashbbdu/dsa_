@@ -17,5 +17,7 @@ public class RotateArrayBy1 {
         for(var num : nums) {
             System.out.print(num + " ");
         }
+
+        System.out.println(2 % 6);
     }
 }
