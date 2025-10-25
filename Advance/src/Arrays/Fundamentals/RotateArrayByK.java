@@ -24,8 +24,7 @@ public class RotateArrayByK {
     public static void main(String[] args) {
         int [] nums = {3, 4, 1, 5, 3, -5};
         int k = 8;
-
-
+        rotateLeftByKBrute(nums , k);
         rotateLeftByKBrute(nums , k);
         System.out.println();
         for(var num : nums) {
