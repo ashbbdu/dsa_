@@ -6,12 +6,11 @@ public class RotateArrayByK {
         int n = nums.length;
         k = k % n;
         int [] temp = new int[k];
-        int [] main = new int[n];
         for(int i = 0 ; i < temp.length ; i++) {
             temp[i] = nums[i];
         }
 
-        for(int i = k ; i < main.length ; i++) {
+        for(int i = k ; i < n ; i++) {
             nums[i - k] = nums[i];
         }
 
