@@ -1,7 +1,7 @@
 package Arrays.LoginBuidling;
 
 public class FindMissingNumber {
-    public static int missingNumberBrute(int[] nums) {
+    public static int missingNumberOptimalI(int[] nums) {
         int n = nums.length;
         int count = 0;
         int sum = (n * (n + 1)) / 2;
@@ -12,6 +12,6 @@ public class FindMissingNumber {
     }
     public static void main(String[] args) {
         int [] nums = {0, 2, 3, 1, 4};
-        System.out.println(missingNumberBrute(nums));
+        System.out.println(missingNumberOptimalI(nums));
     }
 }
