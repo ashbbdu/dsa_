@@ -72,6 +72,34 @@ class Student {
     }
 }
 
+
+class BankAccount {
+    private String accountNumber;
+    private double balance;
+
+    public BankAccount (String _accountNumber , double _balance) {
+        this.accountNumber = _accountNumber;
+        this.balance = _balance;
+    }
+
+    public void deposit (double _amount) {
+        balance = balance + _amount;
+    }
+
+    public void withdraw (double _amount) {
+        if(balance > _amount) {
+            balance = balance - _amount;
+        } else {
+            System.out.println("Insufficient funds!");
+        }
+    }
+
+    public void displayDetails () {
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Balance : " + String.format("%.2f", balance));
+    }
+}
+
 public class IntroOOPs {
     public static void main(String[] args) {
         Employee e1 = new Employee("Ashish" , 1000000000);
@@ -83,6 +111,13 @@ public class IntroOOPs {
         student.setRollNumber(25);
 
         student.getDetails();
+
+
+        BankAccount b1 = new BankAccount("122345" , 10.00);
+
+        b1.deposit(99);
+
+       b1.displayDetails();
 
     }
 }
