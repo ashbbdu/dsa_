@@ -1,7 +1,7 @@
 package Language;
 
 // BankAccount.java
-public class BankAccount1 {
+ class BankAccount1 {
     // Step 1: Private variables — cannot be accessed directly from outside the class
     private String accountNumber;
     private String accountHolderName;
@@ -53,6 +53,8 @@ public class BankAccount1 {
 }
 
 public class Encapsulation {
+
+
     public static void main(String[] args) {
 //        also known as data hiding
 //        attributes should be private and should be accessible using getter and setter
