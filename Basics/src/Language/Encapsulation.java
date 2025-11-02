@@ -59,5 +59,6 @@ public class Encapsulation {
 //        also known as data hiding
 //        attributes should be private and should be accessible using getter and setter
 //        BankDetails class
+//        Encapsulation
     }
 }
