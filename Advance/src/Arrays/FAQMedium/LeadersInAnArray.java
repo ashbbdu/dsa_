@@ -22,7 +22,6 @@ public class LeadersInAnArray {
     }
 
     public static List<Integer> leadersBrute(int[] nums) {
-//        test commit
         List<Integer> leaders = new ArrayList<>();
 
         for(int i = 0 ; i < nums.length ; i++) {
